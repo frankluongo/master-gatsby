@@ -2,6 +2,10 @@
 
 # Master Gatsby
 
+## Current Video Status
+
+I am about to start Video 10: Styling our Layout
+
 A Premium JavaScript + CSS Training Course from Wes Bos. You can grab the course at [MasterGatsby.com](https://mastergatsby.com).
 
 This repo includes the starter files, stepped solutions and sample data for doing the course.
