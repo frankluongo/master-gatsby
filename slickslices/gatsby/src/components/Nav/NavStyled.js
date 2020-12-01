@@ -10,6 +10,7 @@ const NavStyled = styled.nav`
     gap: 2rem;
 
     margin: 0;
+    margin-top: -6rem;
     padding: 0;
 
     text-align: center;
@@ -44,6 +45,9 @@ const NavStyled = styled.nav`
     &:focus {
       color: var(--red);
     }
+  }
+  a[aria-current='page'] {
+    color: var(--red);
   }
 
   .logo {
