@@ -4,7 +4,7 @@
 
 ## Current Video Status
 
-I am about to start Video 21
+I am 0 into video 33
 
 A Premium JavaScript + CSS Training Course from Wes Bos. You can grab the course at [MasterGatsby.com](https://mastergatsby.com).
 
