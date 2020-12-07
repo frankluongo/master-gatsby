@@ -1,6 +1,7 @@
 import React from 'react';
 import SliceMasters from '@components/SliceMasters';
 import { graphql } from 'gatsby';
+import SEO from '@components/SEO';
 
 export default function SliceMastersPage({ data, pageContext }) {
   const paginationData = {
@@ -12,7 +13,7 @@ export default function SliceMastersPage({ data, pageContext }) {
 
   return (
     <>
-      {/* <SEO title={`Slicemasters - Page ${pageContext.currentPage || 1}`} /> */}
+      <SEO title={`Slicemasters - Page ${pageContext.currentPage || 1}`} />
       <SliceMasters
         slicemasters={data.slicemasters.nodes}
         paginationData={paginationData}

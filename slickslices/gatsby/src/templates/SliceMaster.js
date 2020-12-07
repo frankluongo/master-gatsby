@@ -1,12 +1,16 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import SingleSliceMaster from '@components/SliceMaster';
+import SEO from '@components/SEO';
 
 export default function SliceMaster({ data }) {
   return (
-    <div>
-      <SingleSliceMaster master={data.sanityPerson} singlePage />
-    </div>
+    <>
+      <SEO title={data.sanityPerson.name} />
+      <div>
+        <SingleSliceMaster master={data.sanityPerson} singlePage />
+      </div>
+    </>
   );
 }
 
