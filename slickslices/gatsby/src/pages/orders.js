@@ -1,10 +1,12 @@
 import React from 'react';
 import SEO from '@components/SEO';
+import OrderForm from '@components/OrderForm';
 
 export default function OrdersPage() {
   return (
     <>
-      <SEO title="Orders" />I am the orders page
+      <SEO title="Orders" />
+      <OrderForm />
     </>
   );
 }

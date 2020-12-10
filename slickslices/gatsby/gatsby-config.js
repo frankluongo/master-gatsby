@@ -27,6 +27,8 @@ export default {
         aliases: {
           '@assets': './assets',
           '@components': './components',
+          '@context': './context',
+          '@hooks': './hooks',
           '@lib': './lib',
           '@pages': './pages',
           '@styles': './styles',
