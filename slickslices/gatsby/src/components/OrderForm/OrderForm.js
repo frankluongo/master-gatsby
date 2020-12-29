@@ -10,7 +10,11 @@ import { OrderStyled } from './OrderStyled';
 
 export default function OrderForm() {
   const pizzas = usePizzas();
-  const { values, updateValues } = useForm({ name: '', email: '' });
+  const { values, updateValues } = useForm({
+    name: '',
+    email: '',
+    mapleSyrup: '',
+  });
   const {
     error,
     loading,
@@ -40,6 +44,14 @@ export default function OrderForm() {
           label="Email"
           value={values.email}
           onChange={updateValues}
+        />
+        <OrderInput
+          name="mapleSyrup"
+          type="mapleSyrup"
+          label="mapleSyrup"
+          value={values.mapleSyrup}
+          onChange={updateValues}
+          className="maple-syrup"
         />
       </fieldset>
       <fieldset className="menu" disabled={loading}>

@@ -12,6 +12,13 @@ const transporter = nodemailer.createTransport({
 
 exports.handler = async (event, context) => {
   const body = JSON.parse(event.body);
+  // Check for maple syrup
+  if (body.mapleSyrup) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({ message: 'Oh ner! You done did it now.' }),
+    };
+  }
   // Validate The Data
   const reqFields = ['email', 'name', 'order'];
   for (const field of reqFields) {

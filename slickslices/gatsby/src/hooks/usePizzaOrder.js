@@ -36,6 +36,7 @@ export function usePizzaOrder({ pizzas, values }) {
       total: calcTotal(order),
       name: values.name,
       email: values.email,
+      mapleSyrup: values.mapleSyrup,
     };
     const res = await fetch(
       `${process.env.GATSBY_SERVERLESS_BASE}/placeOrder`,
