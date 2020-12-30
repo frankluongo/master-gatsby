@@ -7,7 +7,7 @@ export default function LoadingGrid({ count }) {
       {Array.from({ length: count }, (_, i) => (
         <ItemStyled key={i}>
           <p>
-            <span className="mark">Loading...</span>
+            <span className="mark tilt">Loading...</span>
           </p>
           <img
             src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAQAAADsOj3LAAAADklEQVR42mNkgANGQkwAAJoABWH6GPAAAAAASUVORK5CYII="

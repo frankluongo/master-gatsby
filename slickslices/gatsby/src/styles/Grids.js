@@ -52,7 +52,7 @@ export const ItemStyled = styled.div`
 
     width: 100%;
 
-    transform: rotate(-2deg) translateY(-50%);
+    transform: translateY(-140%);
   }
   .mark {
     display: inline;

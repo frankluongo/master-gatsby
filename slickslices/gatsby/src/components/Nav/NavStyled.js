@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 const NavStyled = styled.nav`
-  margin-bottom: 3rem;
-
   ul {
     align-items: center;
     display: grid;

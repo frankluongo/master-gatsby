@@ -1,6 +1,20 @@
 import { useEffect } from 'react';
 import { useSlicesContext } from '@context';
 
+const gql = String.raw;
+const deets = gql`
+  name
+  _id
+  image {
+    asset {
+      url
+      metadata {
+        lqip
+      }
+    }
+  }
+`;
+
 export function useLatestData() {
   const { setHotSlices, setSliceMasters } = useSlicesContext(null);
 
@@ -15,18 +29,18 @@ export function useLatestData() {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            query: `
-            query {
-              StoreSettings(id: "downtown") {
-                name
-                slicemasters {
+            query: gql`
+              query {
+                StoreSettings(id: "downtown") {
                   name
-                }
-                hotSlices {
-                  name
+                  slicemasters {
+                    ${deets}
+                  }
+                  hotSlices {
+                    ${deets}
+                  }
                 }
               }
-            }
             `,
           }),
         });
