@@ -17,8 +17,8 @@ export default function Pagination({
 
   return (
     <PaginationStyled>
-      <Link disabled={!hasPrev} to={`/${base}/${prevPage}`}>
-        ← Prev
+      <Link disabled={!hasPrev} to={`/${base}/${prevPage}`} title="Previous">
+        ← <span className="text">Prev</span>
       </Link>
       {pagesArr.map((_, i) => (
         <Link
@@ -29,8 +29,8 @@ export default function Pagination({
           {i + 1}
         </Link>
       ))}
-      <Link disabled={!hasNext} to={`/${base}/${nextPage}`}>
-        Next →
+      <Link disabled={!hasNext} to={`/${base}/${nextPage}`} title="Next">
+        <span className="text">Next</span> →
       </Link>
     </PaginationStyled>
   );

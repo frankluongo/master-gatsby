@@ -44,17 +44,32 @@ export const ItemStyled = styled.div`
     grid-row: span 2;
     height: 100%;
   }
+  h2 {
+    @media (max-width: 639px) {
+      font-size: 1.5rem;
+    }
+  }
 
   p {
     margin: 0;
   }
 
   button {
-    font-size: 1.5rem;
+    --size: 1.5rem;
+    font-size: var(--size);
+    @media (max-width: 639px) {
+      --size: 1rem;
+      display: block;
+    }
   }
 
   button + button {
-    margin-left: 1rem;
+    @media (max-width: 639px) {
+      margin-top: 1rem;
+    }
+    @media (min-width: 640px) {
+      margin-left: 1rem;
+    }
   }
 
   .remove {

@@ -4,12 +4,20 @@ export const HomePageGrid = styled.section`
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(2, minmax(auto, 1fr));
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const ItemsGrid = styled.div`
+  --columns: 2;
+
   display: grid;
   gap: 2rem;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  @media (max-width: 540) {
+    --columns: 2;
+  }
 `;
 
 export const ItemStyled = styled.div`
@@ -49,10 +57,12 @@ export const ItemStyled = styled.div`
   p {
     left: 0;
     position: absolute;
+    top: 0;
 
     width: 100%;
+    margin: 0;
 
-    transform: translateY(-140%);
+    transform: translateY(-10px);
   }
   .mark {
     display: inline;

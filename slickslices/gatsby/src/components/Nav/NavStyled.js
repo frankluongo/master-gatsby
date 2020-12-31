@@ -43,13 +43,34 @@ const NavStyled = styled.nav`
     &:focus {
       color: var(--red);
     }
+    @media (max-width: 1023px) {
+      font-size: 1.5rem;
+    }
   }
   a[aria-current='page'] {
     color: var(--red);
   }
 
-  .logo {
+  .logo-item {
     transform: translateY(-25%);
+  }
+  @media (max-width: 620px) {
+    --columns: 4;
+    ul {
+      grid-template-rows: auto auto;
+      grid-template-columns: repeat(var(--columns), 1fr);
+      margin-bottom: 2rem;
+    }
+    .logo-item {
+      display: flex;
+      justify-content: center;
+      order: -1;
+      grid-column: 1 / -1;
+      transform: none;
+    }
+  }
+  @media (max-width: 500px) {
+    --columns: 2;
   }
 `;
 

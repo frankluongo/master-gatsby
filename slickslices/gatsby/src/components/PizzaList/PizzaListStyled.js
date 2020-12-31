@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 
 const PizzaListStyled = styled.div`
+  --max: 300px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(var(--max), 1fr));
   gap: 4rem;
   grid-auto-rows: auto auto 500px;
+  @media (max-width: 600px) {
+    --max: 200px;
+  }
 `;
 
 const SingleZaStyled = styled.div`
@@ -19,6 +23,10 @@ const SingleZaStyled = styled.div`
   h2,
   p {
     margin: 0;
+  }
+
+  .gatsby-image-wrapper img {
+    max-width: 100%;
   }
 `;
 

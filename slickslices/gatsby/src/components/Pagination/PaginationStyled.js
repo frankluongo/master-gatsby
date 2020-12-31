@@ -35,6 +35,15 @@ const PaginationStyled = styled.section`
   & > *::last-child {
     border-right: none;
   }
+
+  @media (max-width: 639px) {
+    a {
+      font-size: 1rem;
+    }
+    .text {
+      display: none;
+    }
+  }
 `;
 
 export { PaginationStyled };
